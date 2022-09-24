@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   margin: 0;
@@ -16,36 +20,29 @@ body {
 }
 
 #nav {
-  display: flex;
   height: 18vh;
   width: 100%;
   background-color: white;
 }
 
 .nav-header {
-  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-right: 20px;
 }
 
 .logo {
-  height: 120px;
   padding-left: 15px;
 }
 
-.top-background {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 82vh;
+header {
+  min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
     url('./hero-bcg.jpeg');
+    transition: 1s;
 }
 
 button {
@@ -55,15 +52,7 @@ button {
 }
 
 .menu-toggle {
-  display: none;
-}
-
-.links {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  list-style: none;
-  font-size: 1.5rem;
+  display: block;
 }
 
 a {
@@ -136,34 +125,53 @@ footer {
 }
 
 .links-container {
-    height: 0;
-    overflow: hidden;
-    transition: 1s;
+  height: 0;
+  overflow: hidden;
+  transition: 1s;
+  background-color: white;
 }
 
-@media screen and (max-width: 662px) {
-  .links-container {
-    height: 0;
-    overflow: hidden;
-    transition: 1s;
-  }
+.show-links {
+  height: 200px;
+}
 
-  .show-links {
-    height: 200px;
+.links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 0 15px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  font-size: 1.2rem;
+}
+
+li:hover {
+  font-weight: 800;
+}
+
+@media screen and (min-width: 800px) {
+  .links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    font-size: 1.5rem;
   }
 
   .menu-toggle {
-    display: block;
-    order: 2;
+    display: none;
   }
-}
 
-@media screen and (min-width: 662px) {
-    .links-container{
-        height: auto;
-    }
+  .links-container {
+    height: auto !important;
+  }
 
-    .links {
-        display: flex;
-    }
+  .nav-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 50px;
+  }
 }
