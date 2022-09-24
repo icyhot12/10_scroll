@@ -10,9 +10,70 @@
       href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
       rel="stylesheet"
     />
-    
+    <script
+      src="https://kit.fontawesome.com/7ce798eefa.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
+    <header id="home">
+      <nav id="nav">
+        <div class="nav-header">
+          <img src="./logo.svg" alt="logo" class="logo" />
+          <button class="menu-toggle">
+            <i class="fa-solid fa-bars fa-3x"></i>
+          </button>
+        </div>
+        <div class="links-container">
+          <ul class="links">
+            <li>
+              <a href="#home" class="scroll-link">home</a>
+            </li>
+            <li>
+              <a href="#about" class="scroll-link">about</a>
+            </li>
+            <li>
+              <a href="#services" class="scroll-link">services</a>
+            </li>
+            <li>
+              <a href="#tours" class="scroll-link">tours</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="top-background">
+      <!-- banner -->
+      <div class="banner">
+        <div class="banner-container">
+          <h1 class="title">scroll project</h1>
+          <p class="banner-desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            odit sint enim ipsam nostrum dolore sunt tempora fugiat doloremque
+            optio?
+          </p>
+          <a href="#tours" class="scroll-link btn">explore tours</a>
+        </div>
+      </div>
+    </main>
+    <section id="about" class="section">
+      <div class="title">About Us</div>
+    </section>
+    <section id="services" class="section">
+      <div class="title">Our Services</div>
+    </section>
+    <section id="tours" class="section">
+      <div class="title">Our Tours</div>
+    </section>
+    <footer>
+      <div class="footer-container">
+        <p>
+          Copyright &copy; backroads travel tours<br />
+          company <span class="footer-date" id="date">2020</span>
+          .all rights reserved
+        </p>
+      </div>
+    </footer>
     <script src="./app.js"></script>
   </body>
 </html>
